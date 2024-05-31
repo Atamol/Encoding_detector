@@ -3,7 +3,7 @@
 
 エンコーディングのエラーが出てしまった場合や，UTF-8やShift JISのファイルが混合されてしまった場合の整理に使えます．
 
-ファイルのサイズが大きい場合は，判定ができた時点で結果を返してくれる`Chardet`の`UniversalDetector`というクラスを使用すると良いでしょう（`encoding_detector_l.py`に該当）．
+ファイルのサイズが大きい場合は，ある程度の推定が完了した時点で結果を返してくれる`Chardet`の`UniversalDetector`というクラスを使用すると良いでしょう（`encoding_detector_l.py`に該当）．
 
 ## Chardetのインストール
 コンソールにて以下を実行してください．
