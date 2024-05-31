@@ -1,5 +1,6 @@
 from chardet.universaldetector import UniversalDetector
 
+file_path = "SAMPLE.csv"
 with open(file_path, 'rb') as f:  
   detector = UniversalDetector()
   for line in f:
