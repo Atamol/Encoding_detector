@@ -1,6 +1,6 @@
 import chardet
 
-file_path = "SAMPLE.csv"
-with open(file_path, 'rb') as f:
+filepath = "SAMPLE.csv"
+with open(filepath, 'rb') as f:
   c = f.read()
   result = chardet.detect(c)
