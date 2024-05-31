@@ -1,6 +1,6 @@
 from chardet.universaldetector import UniversalDetector
 
-with open(filepath, 'rb') as f:  
+with open(file_path, 'rb') as f:  
   detector = UniversalDetector()
   for line in f:
     detector.feed(line)
