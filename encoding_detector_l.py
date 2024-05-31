@@ -9,3 +9,4 @@ with open(file_path, 'rb') as f:
       break
   detector.close()
   result = detector.result
+  print(result)
