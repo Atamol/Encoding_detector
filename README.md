@@ -20,3 +20,4 @@ pip install chardet
 - ファイルのサイズが大きい場合は`encoding_detector_l.py`
 
 というように使い分けてください．
+結果はコンソールに出力されます．
