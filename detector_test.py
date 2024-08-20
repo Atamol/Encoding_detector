@@ -4,7 +4,7 @@ from chardet.universaldetector import UniversalDetector
 
 def detect_encoding(file_path):
     file_size = os.path.getsize(file_path)
-    threshold_size = 1000 * 1024  # 1000KBを閾値とする
+    threshold_size = 500 * 1024  # 500KBを閾値とする
 
     if file_size <= threshold_size:
         print(f"Using chardet.detect() for file size: {file_size} bytes")
