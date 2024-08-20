@@ -21,8 +21,15 @@ pip install chardet
 
 ## 出力例
 例として，結果は以下のように出力されます．
+- 1MB未満の容量のファイル（SHIFT-JIS）:
 ```
-{'encoding': 'UTF-8', 'confidence': 0.99, 'language': 'Japanese'}
+Using chardet.detect() for file size: 410000 bytes
+{'encoding': 'SHIFT_JIS', 'confidence': 0.99, 'language': 'Japanese'}
+```
+- 1MB以上の容量のファイル（UTF-8）:
+```
+Using UniversalDetector for file size: 2100000 bytes
+{'encoding': 'utf-8', 'confidence': 0.99, 'language': ''}
 ```
 
 ## * 大きいファイルを効率的に処理する工夫について
@@ -30,8 +37,3 @@ pip install chardet
 通常の`detect() `関数は大きなファイルに対して使うと検出に長い時間が掛かってしまうのですが，こちらのクラスには`feed()`というメソッドがあります．<br>
 これは複数回に分けてバイト列を渡すことができるもので，十分に推定が完了していると見込めればインスタンスのメンバ変数`done`が真となり，その時点で計算を打ち切って結果を返してくれます．<br>
 これにより大きなファイルの解析でも余計な時間をかけずに済むのです．
-
-`detector.feed`: バイト列を複数回に分けて読み込ませるメソッド
-`detector.done`: 信頼度がある閾値を超えるとTrue となる，終了判定のためのプロパティ
-`detector.result`: 結果が格納されたプロパティ
-`detector.reset`: オブジェクトを初期化するメソッド
