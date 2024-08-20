@@ -1,10 +1,6 @@
 # 概要
-[Chardet](https://pypi.org/project/chardet/)というパッケージを使用し，CSVファイルのエンコーディングを検出することができます．<br>
+[Chardet](https://pypi.org/project/chardet/)というパッケージを使用し，TXTファイルやCSVファイルなどのエンコーディングを検出することができます．<br>
 UTF-8やShift JISのファイルが混合されてしまった場合の整理や，エンコーディングのエラーが出てしまった場合に便利です．
-
-## 2種類のファイルの違い
-こちらでは`encoding_detector_smaller.py`と`encoding_detector_larger.py`の2種類が用意されています．<br>
-前者は比較的小さいファイルに，後者は比較的大きいファイルに対して使うように設計されています（詳細は後述 *）．
 
 ## Chardetの概要，およびインストール
 Chardetはバイト列を読み込み，そのパターンからエンコーディングを推測するというものです．
@@ -15,13 +11,13 @@ pip install chardet
 インストールが完了したら，ファイルを実行することができるようになります．
 
 ## 実装・実行のおおまかな手順
-1. `encoding_detector_smaller.py`，`encoding_detector_larger.py`をそれぞれダウンロードします．
+1. `encoding_detector`をダウンロードします．
 2. Chardetをインストールします（前述）．
 3. コンソールからファイルを実行します．
 
 ## 出力例
-例として，結果は以下のように出力されます．
-- 1MB未満の容量のファイル（SHIFT-JIS）:
+例として，結果は以下のように出力されます．どちらのメソッドを使ったのかについても記述されます．
+- 1MB未満の容量のファイル（Shift-JIS）:
 ```
 Using chardet.detect() for file size: 410000 bytes
 {'encoding': 'SHIFT_JIS', 'confidence': 0.99, 'language': 'Japanese'}
