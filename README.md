@@ -74,4 +74,17 @@
 ## エラーハンドリング
 
 - **無効なファイルパス**: ファイルパスが無効な場合，スクリプトは有効なパスを再入力するよう促します．
+
+  ```bash
+  File path? hogehoge.com
+  Error: Invalid file path or access issue. Please try again.
+  File path?
+  ```
+
 - **ユーザーの中断**: `Ctrl + C`を使用してスクリプトを中断すると，どのタイミングでもメッセージを表示して適切に終了することができます．
+  
+  ```bash
+  File path? # Ctrl + C を入力
+  Process interrupted by user. Exiting...
+  C:\Users\Alice>
+  ```
