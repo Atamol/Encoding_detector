@@ -16,7 +16,7 @@
 
 2. **依存関係のインストール:**
 
-    `chardet` をインストールします．
+    [`chardet`](https://pypi.org/project/chardet/)をインストールします．
 
     ```bash
     pip install chardet
@@ -57,16 +57,17 @@
 ## `chardet`と`UniversalDetector`の説明
 
 - **`chardet.detect()`:**
-  - (`chardet`)[https://pypi.org/project/chardet/]はファイルの全体を読み込み，そのエンコーディングを検出するライブラリです．小さなファイルに対しては迅速に処理が行われ，検出精度が高いのが特徴です．
+  - [`chardet`](https://pypi.org/project/chardet/)はファイルの全体を読み込み，そのエンコーディングを検出するライブラリです．小さなファイルに対しては迅速に処理が行われ，検出精度が高いのが特徴です．
   
 - **`UniversalDetector`:**
-  - `UniversalDetector`は，ファイルを逐次的に読み込みながらエンコーディングを検出し，ある程度の確証が持てた時点で処理を終了します．そのため大きなファイルに対して効率的に処理を行えるため，そういったものに対しては`chardet`よりも適しています．
+  - `UniversalDetector`は，ファイルを逐次的に読み込みながらエンコーディングを検出し，ある程度の確証が持てた時点で処理を終了します．そのため大きなファイルに対して効率的に処理を行えるため，そういったものに対しては[`chardet`](https://pypi.org/project/chardet/)よりも適しています．
 
 ### `chardet`と`UniversalDetector`の切り替えについて
 
 このスクリプトでは，ファイルサイズによって`chardet`と`UniversalDetector`を自動的に切り替えます．
-  - **500KB未満のファイル:** `chardet.detect()` を使用
-  - **500KB以上のファイル:** `UniversalDetector` を使用
+
+  - **500KB未満のファイル:** `chardet.detect()` を使用． 
+  - **500KB以上のファイル:** `UniversalDetector` を使用．
 
 これにより，小さなファイルに対しては迅速で高精度な検出が行われ，大きなファイルに対しては効率的な処理が行われるようになっています．
 
