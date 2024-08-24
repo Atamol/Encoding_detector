@@ -1,3 +1,6 @@
+![License](https://img.shields.io/badge/license-MIT-green)<br>
+![Python](https://img.shields.io/badge/python-3.x-blue)
+
 # Encoding Detector
 
 このスクリプトは，[`chardet`](https://pypi.org/project/chardet/)というライブラリを使用し，指定されたファイルのエンコーディングを検出することができます．<br>
