@@ -51,6 +51,7 @@
     検出できなかった場合には次のように表示されます．
 
     ```text
+    Using UniversalDetector() for file size: 1048576 bytes
     {Encoding: None, Confidence: 0.0, Language: N/A}
     ```
 
