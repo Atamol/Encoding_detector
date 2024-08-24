@@ -65,7 +65,7 @@ Shift_JISやUTF-8が混合されてしまった場合や，単にエンコーデ
   - [`chardet`](https://pypi.org/project/chardet/)はファイルの全体を読み込み，そのエンコーディングを検出するライブラリです．小さなファイルに対しては迅速に処理が行われ，検出精度が高いのが特徴です．
   
 - **`UniversalDetector`:**
-  - `UniversalDetector`は，ファイルを逐次的に読み込みながらエンコーディングを検出し，ある程度の確証が持てた時点で処理を終了します．そのため大きなファイルに対して効率的に処理を行えるため，そういったものに対しては[`chardet`](https://pypi.org/project/chardet/)よりも適しています．
+  - `UniversalDetector`は，ファイルを逐次的に読み込みながらエンコーディングを検出し，ある程度の確証が持てた時点で処理を終了します．そのため大きなファイルに対しては効率的に処理を行えるため，[`chardet`](https://pypi.org/project/chardet/)よりも適していることがあります．
 
 ### `chardet`と`UniversalDetector`の切り替えについて
 
