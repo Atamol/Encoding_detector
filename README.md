@@ -16,7 +16,7 @@ Shift_JISやUTF-8が混合されてしまった場合や，単にエンコーデ
 
 ## インストール
 
-1. **`encoding_detector`をダウンロード，もしくはリポジトリをクローン:**
+1. **`encoding_detector.py`をダウンロード，もしくはリポジトリをクローン:**
 
 2. **依存関係のインストール:**
 
@@ -31,7 +31,7 @@ Shift_JISやUTF-8が混合されてしまった場合や，単にエンコーデ
 1. **スクリプトを実行:**
 
     ```bash
-    python detector_test.py
+    python encoding_detector.py
     ```
 
 2. **ファイルパスの入力:**
